@@ -5,7 +5,7 @@ import PolicyForm from "../components/PolicyForm";
 import {
   Camera, Dumbbell, Heart, Cake, Package, Video, MoreHorizontal,
   Home, LayoutGrid, User, Bell, Phone, MapPin, Star, Pencil, Check,
-  CheckCircle2, ImageIcon, Calendar, Clock
+  CheckCircle2, ImageIcon, Calendar, Clock, ChevronLeft
 } from "lucide-react";
 
 function PolicyBadge({ label }: { label: string }) {
@@ -286,7 +286,17 @@ export default function ConsumerApp() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[28px] bg-gray-900 rounded-b-2xl z-20" />
 
         {/* Header */}
-        {showHeader && (
+        {showHeader && screen === "notifications" && (
+          <div className="relative z-10 bg-white pt-10 px-3 pb-2">
+            <div className="flex items-center h-10">
+              <button onClick={goBack} className="text-gray-700 p-1 -ml-1">
+                <ChevronLeft size={24} strokeWidth={2} />
+              </button>
+              <h1 className="text-base font-bold text-gray-900 ml-1">알림</h1>
+            </div>
+          </div>
+        )}
+        {showHeader && screen !== "notifications" && (
           <div className="relative z-10 bg-white pt-10 pl-2 pr-4 pb-0">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center">
