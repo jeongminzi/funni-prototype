@@ -599,7 +599,7 @@ export default function BusinessApp() {
                 <PolicyForm question="상세 카테고리 목록을 확정해주세요. (웨딩/프로필/피아노 등 대략적 방향만 논의됨)" screen="업체" area="카테고리 목록" />
               </div>
 
-              <p className="px-4 text-sm font-bold mb-3">&lsquo;{categoryCats.length === 0 ? "전체" : categoryCats.join(", ")}&rsquo; 스튜디오 <span className="text-fg-brand">{catFiltered.length}</span></p>
+              <p className="px-4 mt-6 text-sm font-bold mb-3">&lsquo;{categoryCats.length === 0 ? "전체" : categoryCats.join(", ")}&rsquo; 스튜디오 <span className="text-fg-brand">{catFiltered.length}</span></p>
 
               {/* 카테고리 페이지 광고 배너 */}
               <div className="mx-4 mb-3 overflow-hidden rounded-xl">
